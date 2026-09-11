@@ -24,7 +24,7 @@ Ada dua definisi kanonikal yang menjadi landasan akademis:
    > *"Machine Learning is the field of study that gives computers the ability to learn without being explicitly programmed."*
    *(Bidang studi yang memberikan komputer kemampuan untuk belajar tanpa harus diprogram secara eksplisit untuk setiap skenario).*
 2. **Tom M. Mitchell (1997)**:
-   > *"A computer program is said to learn from experience $E$ with respect to some class of tasks $T$ and performance measure $P$, if its performance at tasks in $T$, as measured by $P$, improves with experience $E$."*
+   > *A computer program is said to learn from experience $E$ with respect to some class of tasks $T$ and performance measure $P$, if its performance at tasks in $T$, as measured by $P$, improves with experience $E$*
 
 Secara operasional, jika kita membangun sistem klasifikasi email spam:
 - **Tugas ($T$)**: Mengklasifikasikan email masuk ke dalam kategori "Spam" atau "Bukan Spam".
@@ -64,10 +64,10 @@ MACHINE LEARNING (Software 2.0):
 
 #### Komparasi Alur Kerja:
 * **Pemrograman Tradisional (Aturan Eksplisit)**:
-  - *Workflow*: Manusia (programmer) menganalisis masalah $ightarrow$ merumuskan logika/kondisi manual (misal: pernyataan `if-else`, perulangan, rumus matematika baku) $ightarrow$ memasukkan data ke program $ightarrow$ program menghasilkan output.
+  - *Workflow*: Manusia (programmer) menganalisis masalah $\rightarrow$ merumuskan logika/kondisi manual (misal: pernyataan `if-else`, perulangan, rumus matematika baku) $\rightarrow$ memasukkan data ke program $\rightarrow$ program menghasilkan output.
   - *Keterbatasan*: Sangat rapuh (*fragile*) ketika menghadapi masalah berdimensi tinggi, variasi kasus tak terbatas, atau kondisi non-linear (contoh: membedakan foto kucing dan anjing, memprediksi penipuan transaksi real-time).
 * **Machine Learning (Penalaran Berbasis Data)**:
-  - *Workflow*: Algoritma diberikan himpunan data beserta contoh hasil yang diinginkan $ightarrow$ algoritma menyesuaikan parameter internalnya untuk mempelajari fungsi aproksimasi $f(X) pprox Y$ $ightarrow$ menghasilkan model berupa fungsi aturan matematis yang dapat digeneralisasi untuk data baru.
+  - *Workflow*: Algoritma diberikan himpunan data beserta contoh hasil yang diinginkan $\rightarrow$ algoritma menyesuaikan parameter internalnya untuk mempelajari fungsi aproksimasi $f(X)\approx Y$ $\rightarrow$ menghasilkan model berupa fungsi aturan matematis yang dapat digeneralisasi untuk data baru.
 
 ---
 
@@ -105,7 +105,7 @@ Di mana:
 - $f(X)$ adalah fungsi pemetaan sejati (*true underlying function*) yang tidak diketahui secara pasti.
 - $\epsilon$ adalah galat acak tak tereduksi (*irreducible random error*) dengan nilai ekspektasi $\mathbb{E}(\epsilon) = 0$.
 
-Tujuan utama algoritma ML adalah mencari fungsi aproksimasi $\hat{f}(X)$ sedemikian rupa sehingga $\hat{f}(X) pprox f(X)$ dan meminimalkan galat prediksi pada data yang belum pernah dilihat sebelumnya (*unseen test data*).
+Tujuan utama algoritma ML adalah mencari fungsi aproksimasi $\hat{f}(X)$ sedemikian rupa sehingga $\hat{f}(X) \approx f(X)$ dan meminimalkan galat prediksi pada data yang belum pernah dilihat sebelumnya (*unseen test data*).
 
 ---
 
@@ -189,7 +189,7 @@ Di dunia komputasi dan kecerdasan buatan, terdapat tiga pendekatan utama dalam m
 
 #### 1. Rules-Based Systems (Sistem Berbasis Aturan / Symbolic AI)
 - **Konsep**: Pendekatan era *Good Old-Fashioned Artificial Intelligence* (GOFAI) dan *Expert Systems* (tahun 1970-an hingga 1980-an seperti sistem MYCIN atau Dendral). Pengetahuan para pakar manusia dikodifikasikan ke dalam basis pengetahuan (*knowledge base*) berupa serangkaian proposisi logika dan aturan formal:
-  $$	ext{IF } (	ext{Kondisi}_1 	ext{ AND } 	ext{Kondisi}_2) 	ext{ THEN } 	ext{Aksi / Kesimpulan}$$
+  $$\text{IF } (\text{Kondisi}_1 \text{ AND } \text{Kondisi}_2) \text{ THEN } \text{Aksi / Kesimpulan}$$
 - **Karakteristik**:
   - *Deterministik*: Masukan yang identik selalu menghasilkan keluaran yang 100% sama dan dapat dilacak jalurnya secara transparan.
   - *Zero Learning*: Sistem tidak berevolusi secara mandiri dari data; jika ada perubahan perilaku dunia nyata, manusia harus memperbarui basis aturannya secara manual.
@@ -199,11 +199,11 @@ Di dunia komputasi dan kecerdasan buatan, terdapat tiga pendekatan utama dalam m
 - **Konsep**: Berakar pada matematika terapan (Ronald Fisher, Jerzy Neyman, Egon Pearson). Fokus utamanya adalah memahami struktur data, menguji hipotesis ilmiah, dan menarik kesimpulan (*inference*) mengenai populasi berdasarkan sampel terbatas.
 - **Karakteristik**:
   - *Pentingnya Asumsi*: Menuntut asumsi ketat terhadap proses pembentukan data (*data generating process*), seperti linearitas, normalitas residual, homoskedastisitas, dan ketiadaan multikolinearitas.
-  - *Interpretability & P-Values*: Menitikberatkan signifikansi statistik parameter koefisien ($eta$), nilai $p$-value, interval kepercayaan (*confidence intervals*), serta kausalitas yang dapat dipertanggungjawabkan secara teoretis.
+  - *Interpretability & P-Values*: Menitikberatkan signifikansi statistik parameter koefisien ($\beta$), nilai $p$-value,  kepercayaan (*confidence intervals*), serta kausalitas yang dapat dipertanggungjawabkan secara teoretis.
   - *Orientasi*: Lebih fokus pada pemahaman (*understanding*) dan pembuktian hubungan sebab-akibat daripada sekadar skor akurasi prediksi mentah.
 
 #### 3. Machine Learning (Algorithmic / Empirical Modeling)
-- **Konsep**: Dipelopori oleh ilmuwan komputer yang fokus pada pemecahan masalah praktis berskala besar. Sebagaimana dijelaskan oleh pakar statistik ternama Leo Breiman (2001) dalam publikasi klasiknya *"Statistical Modeling: The Two Cultures"*, ML menganggap mekanisme alam pembentuk data sebagai "kotak hitam kompleks" (*complex black box*) yang tidak dapat disederhanakan oleh asumsi matematis kaku.
+- **Konsep**: Dipelopori oleh ilmuwan komputer yang fokus pada pemecahan masalah praktis berskala besar. Sebagaimana dijelaskan oleh pakar statintervalistik ternama Leo Breiman (2001) dalam publikasi klasiknya *"Statistical Modeling: The Two Cultures"*, ML menganggap mekanisme alam pembentuk data sebagai "kotak hitam kompleks" (*complex black box*) yang tidak dapat disederhanakan oleh asumsi matematis kaku.
 - **Karakteristik**:
   - *Akurasi Prediksi Out-of-Sample*: Tujuan utama adalah memaksimalkan akurasi pada data baru menggunakan validasi silang (*cross-validation*) dan pembagian *train/test split*.
   - *Fleksibilitas Tinggi*: Mampu menangani pola interaksi non-linear berderajat tinggi tanpa mengharuskan programmer merumuskan fungsi distribusinya terlebih dahulu.
