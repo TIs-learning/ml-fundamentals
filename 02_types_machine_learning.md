@@ -14,7 +14,6 @@ Sistem Machine Learning dapat dikelompokkan ke dalam tiga dimensi utama yang sal
 
 ```
 
-```
                               +---------------------------------------+
                               |    TAKSONOMI SISTEM MACHINE LEARNING  |
                               +---------------------------------------+
@@ -23,7 +22,6 @@ Sistem Machine Learning dapat dikelompokkan ke dalam tiga dimensi utama yang sal
     |                                            |                                            |
     v                                            v                                            v
 
-```
 
 [ DERAJAT SUPERVISI ]                     [ CARA SISTEM BERADAPTASI ]                  [ MEKANISME GENERALISASI ]
 
@@ -71,7 +69,7 @@ Dataset pada *Unsupervised Learning* hanya memuat fitur masukan ($X$) tanpa labe
 
 #### B. Empat Tugas Pokok:
 1. **Pengelompokan (*Clustering*)**:
-   * Mempartisi data ke dalam klaster-klaster berdasarkan ukuran kedekatan jarak atau densitas fitur.
+   * Membagi data ke dalam klaster-klaster berdasarkan ukuran kedekatan jarak atau densitas fitur.
    * *Contoh*: segmentasi profil pelanggan pada platform niaga elektronik (*e-commerce*).
    * *Algoritma*: K-Means, Hierarchical Clustering, dan DBSCAN.
 2. **Reduksi Dimensi (*Dimensionality Reduction*)**:
@@ -111,6 +109,10 @@ Pelabelan data secara manual memerlukan biaya tinggi, waktu lama, dan keahlian m
 #### A. Paradigma Supervisi Mandiri
 *Self-Supervised Learning* (SSL) memanfaatkan data mentah tanpa anotasi manual untuk menghasilkan label supervisinya sendiri dari struktur internal data (*supervision from the data itself*).
 
+> Supervisi (supervision): pengawasan atau bimbingan. Di machine learning, supervisi berarti ada “kunci jawaban” yang memandu model saat belajar, sehingga model tahu tebakannya benar atau salah.
+
+> Anotasi (annotation): proses pelabelan data secara manual oleh manusia. Misalnya, seseorang melihat 10.000 foto satu per satu lalu mengetik label “kucing” atau “anjing”, atau menandai kalimat mana yang bermakna positif dan negatif.
+
 Yann LeCun menjelaskan kedudukan SSL melalui analogi kue (*The Cake Analogy*):
 * **Reinforcement Learning** diibaratkan ceri di atas kue (hanya menerima sedikit umpan balik skalar imbalan).
 * **Supervised Learning** diibaratkan lapisan gula di atas kue (terbatas pada ribuan bit informasi label manusia).
@@ -130,8 +132,6 @@ Reinforcement Learning (RL) beroperasi tanpa pasangan data input-output statis. 
 
 
 ```
-
-```
                   +-------------------+
                   |    ENVIRONMENT    |
                   +-------------------+
@@ -143,9 +143,6 @@ Reinforcement Learning (RL) beroperasi tanpa pasangan data input-output statis. 
                   +-------------------+
                   |       AGENT       |
                   +-------------------+
-
-```
-
 ```
 
 #### B. Komponen Inti:
@@ -269,9 +266,6 @@ Mengizinkan model memperbarui bobotnya secara otomatis di peladen produksi membu
 
 Berdasarkan cara sistem melakukan generalisasi terhadap titik data kueri baru (*unseen instances*), pendekatan pembelajaran mesin terbagi menjadi **Instance-Based Learning** dan **Model-Based Learning**.
 
-
-```
-
 ```
                               +---------------------------------------+
                               |         MEKANISME GENERALISASI        |
@@ -283,9 +277,6 @@ Berdasarkan cara sistem melakukan generalisasi terhadap titik data kueri baru (*
              |    INSTANCE-BASED LEARNING (LAZY) |     |     MODEL-BASED LEARNING (EAGER)  |
              |   Menghafal Titik Data Mentah     |     |    Mengekstraksi Parameter Fungsi |
              +-----------------------------------+     +-----------------------------------+
-
-```
-
 ```
 
 ---
@@ -295,7 +286,7 @@ Berdasarkan cara sistem melakukan generalisasi terhadap titik data kueri baru (*
 #### A. Prinsip Operasional
 Pada *Instance-Based Learning*:
 * Algoritma mempelajari pola dengan cara **menghafal seluruh data pelatihan mentah** ke dalam memori (*memorization*).
-* Saat fase pelatihan, sistem tidak menjalankan komputasi optimasi fungsi matematika apa pun sehingga waktu komputasi pelatihan bernilai instan ($O(1)$). Karakteristik ini membuatnya dijuluki sebagai **Lazy Learning**.
+* Saat fase pelatihan, sistem tidak menjalankan komputasi optimasi fungsi matematika apa pun sehingga waktu komputasi pelatihan bernilai instan $O(1)$. Karakteristik ini membuatnya dijuluki sebagai **Lazy Learning**.
 * Generalisasi baru dihitung saat ada titik data kueri baru yang masuk. Sistem mengukur jarak kesamaan (*similarity/distance metric*, seperti Euclidean atau Manhattan) antara data baru tersebut dengan data historis yang tersimpan.
 
 #### B. Contoh Representatif: k-Nearest Neighbors (k-NN)
@@ -324,7 +315,7 @@ $$f(X) = W^T X + b$$
 | Dimensi Evaluasi | Instance-Based Learning (Lazy) | Model-Based Learning (Eager) |
 | :--- | :--- | :--- |
 | **Prinsip Dasar** | Menghafal seluruh sampel data (*memorizing*) | Mengekstraksi parameter fungsi (*generalizing*) |
-| **Durasi Komputasi Latih** | Instan ($O(1)$) | Intensif dan memakan daya komputasi |
+| **Durasi Komputasi Latih** | Instan $O(1)$ | Intensif dan memakan daya komputasi |
 | **Durasi Komputasi Prediksi** | Lambat ($O(N)$ terhadap total observasi) | Sangat cepat ($O(d)$ terhadap jumlah fitur) |
 | **Kebutuhan Memori Model** | Besar (wajib menyimpan seluruh data latih) | Ringkas (hanya menyimpan berkas bobot/parameter) |
 | **Ketergantungan Data Latih**| Data latih wajib ada saat inferensi berjalan | Data latih dapat dibuang setelah pelatihan tuntas |
@@ -346,8 +337,6 @@ Diagram alur logis pemilihan kombinasi paradigma sistem Machine Learning:
 
 
 ```
-
-```
                         [ Analisis Masalah Rekayasa ]
                                        |
             +--------------------------+--------------------------+
@@ -359,30 +348,37 @@ Apakah data memiliki label target?                 Bagaimana dinamika aliran dat
  [ YA ]           [ TIDAK ]                          [ STATIS ]       [ DINAMIS ]
    |                 |                               (Berkala)        (Streaming)
    v                 v                                   |                 |
-
-```
-
-SUPERVISED       UNSUPERVISED                              v                 v
-(Regresi atau    (Clustering,                            BATCH            ONLINE
+SUPERVISED       UNSUPERVISED                            v                 v
+(Regresi atau    (Clustering,                          BATCH             ONLINE
 Klasifikasi)     Reduksi Dimensi)                     LEARNING          LEARNING
 |                 |                                   |                 |
 +--------+--------+                                   +--------+--------+
-|                                                     |
-+--------------------------+--------------------------+
-|
-Bagaimana toleransi latensi inferensi?
-|
-+-----------------+-----------------+
-|                                   |
-[ SANGAT KETAT ]                    [ FLEKSIBEL ]
-(Inference < 10ms)                 (Dataset Kecil/Lokal)
-|                                   |
-v                                   v
-MODEL-BASED                       INSTANCE-BASED
-(Linear/Trees/NN)                      (k-NN/RBF)
+         |                                                     |
+---------+-----------------+--------------------------+
+                            |
+            Bagaimana toleransi latensi inferensi?
+                            |
+        +-------------------+------------------+
+        |                                       |
+    [ SANGAT KETAT ]                        [ FLEKSIBEL ]
+    (Inference < 10ms)                 (Dataset Kecil/Lokal)
+        |                                       |
+        v                                       v
+        MODEL-BASED                      INSTANCE-BASED
+        (Linear/Trees/NN)                  (k-NN/RBF)
 
 ```
 
+---
+
+## Beberapa Istilah
+- Inferensi (inference): proses saat model menggunakan rumusnya untuk menebak atau memprediksi data baru, hanya menebak tanpa belajar lagi.
+
+- Bobot/Parameter (weights): kumpulan angka di dalam model yang menentukan seberapa berpengaruh suatu faktor terhadap hasil tebakan.
+
+- Lupa katastropik (catastrophic forgetting): kondisi saat model menerima data baru, lalu bobotnya berubah drastis hingga lupa total pada pola data lama yang pernah dipelajari.
+
+- Inferensi adalah saat model menebak, sedangkan generalisasi adalah seberapa pintar model tersebut saat menebak data baru (tingkat kepahaman).
 ---
 
 ## 6. Daftar Referensi dan Rujukan Terverifikasi
