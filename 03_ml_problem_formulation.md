@@ -1,6 +1,6 @@
 # Modul Pembelajaran: ML Problem Formulation
 
-Dokumentasi pembelajaran ini membahas tahap paling krusial dalam siklus rekayasa *Machine Learning* (ML), yaitu **Formulasi Masalah (*Problem Formulation*)**—seni dan sains mentranslasikan kebutuhan bisnis dunia nyata menjadi permasalahan komputasi matematis yang terdefinisi dengan baik (*well-defined mathematical problem*).
+Dokumentasi pembelajaran ini membahas tahap paling krusial dalam siklus rekayasa *Machine Learning* (ML), yaitu **Formulasi Masalah (*Problem Formulation*)**: seni dan sains mentranslasikan kebutuhan bisnis dunia nyata menjadi permasalahan komputasi matematis yang terdefinisi dengan baik (*well-defined mathematical problem*).
 
 ---
 
