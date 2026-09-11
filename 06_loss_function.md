@@ -1,6 +1,6 @@
 # Modul Pembelajaran: Loss Functions (Optimization Target)
 
-Modul pembelajaran ini membedah konsep **Fungsi Kerugian (*Loss Function*)** dalam *Machine Learning* (ML)—kompas matematika yang memandu model untuk mengetahui seberapa buruk tebakannya, seberapa besar hukuman yang harus diterima, dan ke arah mana parameter harus diperbaiki agar model menjadi semakin cerdas.
+Modul pembelajaran ini membedah konsep **Fungsi Kerugian (*Loss Function*)** dalam *Machine Learning* (ML) sebagai kompas matematika yang memandu model untuk mengetahui seberapa buruk tebakannya, seberapa besar hukuman yang harus diterima, dan ke arah mana parameter harus diperbaiki agar model menjadi semakin cerdas.
 
 ---
 
@@ -172,7 +172,7 @@ Nilai Loss ^
 ### 3.4 Tabel Komparasi MAE vs MSE
 | Parameter | Mean Absolute Error (MAE) | Mean Squared Error (MSE) |
 | :--- | :--- | :--- |
-| **Operasi Matematika** | Nilai mutlak ($|y - \hat{y}|$) | Kuadrat ($(y - \hat{y})^2$) |
+| **Operasi Matematika** | Nilai mutlak ($abs(y - \hat{y})$) | Kuadrat ($(y - \hat{y})^2$) |
 | **Bentuk Kurva** | Sudut tajam huruf V di titik nol | Kurva mangkuk parabola mulus |
 | **Sikap pada Galat Besar** | Hukuman bertambah sebanding/linear | Hukuman meledak secara eksponensial |
 | **Ketahanan Pencilan** | Sangat tangguh (*robust*) | Sangat rapuh (*sensitive*) |
