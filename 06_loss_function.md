@@ -245,7 +245,7 @@ Dengan kurva logaritmik ini, model dipaksa untuk tidak hanya menebak kelas yang 
 ## 5. Mengapa Model Meminimalkan Loss, Bukan Memaksimalkan Akurasi?
 
 Pertanyaan paling mendasar yang sering muncul dari pemula:
-> *“Tujuan akhir kita kan ingin model memiliki akurasi $99\%$. Kenapa algoritma latih tidak langsung disuruh memaksimalkan skor akurasi saja? Kenapa harus repot-repot membuat rumus fungsi kerugian?”*
+> *“Tujuan akhir kita kan ingin model memiliki akurasi 99%. Kenapa algoritma latih tidak langsung disuruh memaksimalkan skor akurasi saja? Kenapa harus repot-repot membuat rumus fungsi kerugian?”*
 
 Jawabannya terletak pada **keterbatasan sifat matematika kalkulus**.
 
